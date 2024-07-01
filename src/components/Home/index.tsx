@@ -29,7 +29,7 @@ export const HomeComponent: React.FC<HomeComponentProps> = ({
 }) => {
   return (
     <Container>
- <ScrollView horizontal={false}>
+ <ScrollView >
 
 
  <Header>

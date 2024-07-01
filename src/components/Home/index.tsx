@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, TouchableOpacityProps } from 'react-native';
+import { Dimensions, ScrollView, TouchableOpacityProps } from 'react-native';
 import DocSection from '~/components/DocSection';
 import DocumentCard from '~/components/DocumentCard';
 import { StoryComponents } from '~/components/StoryComponents';
@@ -27,62 +27,49 @@ export const HomeComponent: React.FC<HomeComponentProps> = ({
   disabled,
   ...rest
 }) => {
+  const screenWidth = Dimensions.get('window').width;
+
   return (
     <Container>
- <ScrollView showsHorizontalScrollIndicator={false} horizontal={false}>
+      <ScrollView 
+        showsHorizontalScrollIndicator={false} 
+        horizontal={false} 
+        contentContainerStyle={{ flexGrow: 1, width: screenWidth }}
+      >
+        <Header>
+          <Logo source={require('assets/images/meta_logo.png')} />
+          <IconContainer>
+            <Icon source={require('assets/images/nav_menu.png')} />
+          </IconContainer>
+        </Header>
 
+        <StoryHeader>
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+            <StoryComponents title="Simcards" />
+            <StoryComponents background='#4CA6A8' title="Devices" />
+            <StoryComponents background='#7A4CA8' title="Mapa" />
+            <StoryComponents background='#EA4C89' title="Hardwares" />
+          </ScrollView>
+        </StoryHeader>
 
- <Header>
-  <Logo source={require('assets/images/meta_logo.png')}/>
+        <InputConatiner>
+          <InputComponent placeholder='Buscar por...' />
+        </InputConatiner>
 
-
-  <IconContainer>
-    <Icon source={require('assets/images/nav_menu.png')}/>
-  </IconContainer>
- </Header>
-
-
- <StoryHeader>
- <ScrollView horizontal={true}>
-<StoryComponents title="Simcards" />
-
- <StoryComponents background='#4CA6A8' title="Devices" />
- 
- <StoryComponents  background='#7A4CA8' title="Mapa" />
-
- <StoryComponents  background='#EA4C89' title="Hardwares" />
-</ScrollView>
-
- </StoryHeader>
-
-<InputConatiner>
-<InputComponent placeholder='Buscar por...'/>
-</InputConatiner>
-
-
- <DocSection />
- <DocumentContainer>
- <DocumentCard />
- </DocumentContainer>
-
- <DocumentContainer>
- <DocumentCard />
- </DocumentContainer>
-
- <DocumentContainer>
- <DocumentCard />
- </DocumentContainer>
-
- <DocumentContainer>
- <DocumentCard />
- </DocumentContainer>
-
-
- 
-       
-       
-  </ScrollView>
-
+        <DocSection />
+        <DocumentContainer>
+          <DocumentCard />
+        </DocumentContainer>
+        <DocumentContainer>
+          <DocumentCard />
+        </DocumentContainer>
+        <DocumentContainer>
+          <DocumentCard />
+        </DocumentContainer>
+        <DocumentContainer>
+          <DocumentCard />
+        </DocumentContainer>
+      </ScrollView>
     </Container>
   );
 };

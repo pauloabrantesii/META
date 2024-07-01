@@ -17,7 +17,6 @@ export const WrapperTitle = styled.View`
   align-items: center;
   padding-top: 32px;
   gap: 8px;
-  margin-left: 16px;
 `;
 
 export const Title = styled.Text`
@@ -28,7 +27,7 @@ export const Title = styled.Text`
 
 export const CardContainer = styled.View`
 gap: 24px;
-margin-top: 24px;
+margin-top: 12px;
 
 `;
 
@@ -42,7 +41,7 @@ justify-content: center;
 
 border-radius: 12px;
 background: #FFFFFF;
-margin-left: 16px;
+margin-right: 16px;
 `;
 
 export const Header = styled.View`

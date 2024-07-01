@@ -14,7 +14,6 @@ type ContainerProps = {
 
 export const Container = styled.SafeAreaView`
   flex: 1;
-  width: 100%;
   background: #F2F2F2;
   align-items: center;
   padding: 12px;
@@ -48,4 +47,13 @@ flex-direction: row;
 
 export const WrapperStory = styled.View`
   margin-right: 12px;
+`;
+
+export const DocumentContainer = styled.View`
+  padding: 12px;
+
+`;
+
+export const InputConatiner = styled.View`
+padding: 24px;
 `;

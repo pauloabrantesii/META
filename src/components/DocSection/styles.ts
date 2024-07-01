@@ -14,16 +14,17 @@ export const Logo = styled.Image`
 
 export const WrapperTitle = styled.View`
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   padding-top: 32px;
-  gap: 8px;
-  margin-left: 16px;
+  
+
 `;
 
 export const Title = styled.Text`
   color: #1A1854;
   font-size: 20px;
   font-weight: 600;
+  right: 30px;
 `;
 
 export const NumberContainer = styled.View`
@@ -52,7 +53,6 @@ margin-top: 24px;
 `;
 
 export const CardItem = styled.View`
-display: flex;
 width: 276px;
 height: 155px;
 padding: 20px 16px;
@@ -62,11 +62,10 @@ gap: 12px;
 border-radius: 12px;
 border: 1px solid #C3DCF0;
 background: #F0F5F8;
-margin-left: 16px;
+
 `;
 
 export const Header = styled.View`
-display: flex;
 flex-direction: column;
 align-items: flex-start;
 gap: 2px;
@@ -82,7 +81,7 @@ flex-direction: column;
 align-items: flex-start;
 gap: 2px;
 flex: 1 0 0;
-margin-left: 12px;
+
 `;
 
 export const HeaderTitle = styled.Text`

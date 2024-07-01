@@ -78,7 +78,7 @@ export const BottomContent = styled.View`
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-flex: 1 0 0;
+
 `;
 
 export const BottomTitle = styled.Text`

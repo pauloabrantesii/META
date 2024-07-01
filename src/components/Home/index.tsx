@@ -4,7 +4,7 @@ import DocSection from '~/components/DocSection';
 import DocumentCard from '~/components/DocumentCard';
 import { StoryComponents } from '~/components/StoryComponents';
 import { InputComponent } from '../InputComponent';
-import { Container, Header, Icon, IconContainer, Logo, StoryHeader } from './styles';
+import { Container, DocumentContainer, Header, Icon, IconContainer, InputConatiner, Logo, StoryHeader } from './styles';
 
 type HomeComponentProps = TouchableOpacityProps & {
   title: string;
@@ -29,7 +29,7 @@ export const HomeComponent: React.FC<HomeComponentProps> = ({
 }) => {
   return (
     <Container>
- <ScrollView >
+ <ScrollView showsHorizontalScrollIndicator={false} horizontal={false}>
 
 
  <Header>
@@ -55,12 +55,30 @@ export const HomeComponent: React.FC<HomeComponentProps> = ({
 
  </StoryHeader>
 
+<InputConatiner>
+<InputComponent placeholder='Buscar por...'/>
+</InputConatiner>
 
- <InputComponent />
+
+ <DocSection />
+ <DocumentContainer>
+ <DocumentCard />
+ </DocumentContainer>
+
+ <DocumentContainer>
+ <DocumentCard />
+ </DocumentContainer>
+
+ <DocumentContainer>
+ <DocumentCard />
+ </DocumentContainer>
+
+ <DocumentContainer>
+ <DocumentCard />
+ </DocumentContainer>
 
 
-         <DocSection />
-         <DocumentCard />
+ 
        
        
   </ScrollView>

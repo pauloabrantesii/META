@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { Dimensions, ScrollView, TouchableOpacityProps } from 'react-native';
 import DocSection from '~/components/DocSection';
@@ -27,6 +28,7 @@ export const HomeComponent: React.FC<HomeComponentProps> = ({
   disabled,
   ...rest
 }) => {
+  const navigation = useNavigation();
   const screenWidth = Dimensions.get('window').width;
 
   return (
@@ -47,7 +49,7 @@ export const HomeComponent: React.FC<HomeComponentProps> = ({
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
             <StoryComponents title="Simcards" />
             <StoryComponents background='#4CA6A8' title="Devices" />
-            <StoryComponents background='#7A4CA8' title="Mapa" />
+            <StoryComponents background='#7A4CA8' title="Mapa" onPress={() => navigation.navigate('MapContainer')}/>
             <StoryComponents background='#EA4C89' title="Hardwares" />
           </ScrollView>
         </StoryHeader>

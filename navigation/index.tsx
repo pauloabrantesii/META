@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import { HomeContainer } from '~/screens/Home';
 import { LoginContainer } from '~/screens/Login';
+import Maps from '~/screens/Maps';
 import TabNavigator from './tab-navigator';
 
 export type RootStackParamList = {
@@ -10,6 +11,7 @@ export type RootStackParamList = {
   Modal: undefined;
   Login: undefined;
   Home: undefined;
+  MapContainer: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -32,6 +34,12 @@ export default function RootStack() {
 <Stack.Screen
           name="Home"
           component={HomeContainer}
+          options={{ headerShown: false }}
+        />
+
+<Stack.Screen
+          name="MapContainer"
+          component={Maps}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

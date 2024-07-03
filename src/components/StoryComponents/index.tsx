@@ -8,12 +8,12 @@ type StoryProps = {
   background?: string;
 };
 
-export const StoryComponents = ({ title, path, children, background }: StoryProps) => {
+export const StoryComponents = ({ title, path, children, background, onPress }: StoryProps) => {
     const navigation = useNavigation();
 
   return (
      <Container>
-        <Circle background={background} />
+        <Circle background={background} onPress={onPress}/>
         <Title>{title}</Title>
      </Container>
   );

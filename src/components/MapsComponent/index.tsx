@@ -1,7 +1,8 @@
+import { FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import React, { useEffect, useRef, useState } from 'react';
 import MapView, { LatLng, Marker, Polyline, Region } from 'react-native-maps';
-import { Button, ButtonContainer, ButtonFindMe, ButtonText, Container, IconCar, Map } from './styles';
+import { Button, ButtonContainer, ButtonFindMe, ButtonText, Container, GoBackContainer, IconCar, Map } from './styles';
 
 const mockVehicleData: LatLng[][] = [
   [
@@ -82,6 +83,13 @@ const MapsComponent: React.FC = () => {
         onRegionChangeComplete={setRegion}
       >
 
+
+
+
+      
+      <GoBackContainer onPress={() => navigation.goBack()}>
+        <FontAwesome name="chevron-left" size={12} color="#fff" />
+      </GoBackContainer>
 
         {vehiclePositions.map((position, index) => (
           <Marker key={index} coordinate={position} >

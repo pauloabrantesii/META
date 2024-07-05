@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BackgroundImage, Connected, Container, Header, HeaderContent, HeaderTextContainer, Logo, Subtitle, Title } from './styles';
+import { BackgroundImage, Connected, Container, Content, Header, HeaderContent, HeaderTextContainer, Logo, Subtitle, Title } from './styles';
 
 interface DocumentsProps {
     title: string;
@@ -12,6 +12,8 @@ interface DocumentsProps {
 const DocumentCard: React.FC<DocumentsProps> = ({ title, code, cadaster, date }) => {
     return (
         <Container>
+<Title>Devices</Title>
+<Content>
             <Header>
                 <HeaderContent>
                     <BackgroundImage>
@@ -28,7 +30,9 @@ const DocumentCard: React.FC<DocumentsProps> = ({ title, code, cadaster, date })
 
             </Header>
 
+        </Content>
         </Container>
+       
     );
 }
 

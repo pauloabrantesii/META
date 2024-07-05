@@ -5,7 +5,7 @@ import DocSection from '~/components/DocSection';
 import DocumentCard from '~/components/DocumentCard';
 import { StoryComponents } from '~/components/StoryComponents';
 import { InputComponent } from '../InputComponent';
-import { Container, DocumentContainer, Header, Icon, IconContainer, InputConatiner, Logo, StoryHeader } from './styles';
+import { Container, DocumentContainer, Header, Icon, IconContainer, InputConatiner, Logo, SearchContainer, SearchIcon, StoryHeader } from './styles';
 
 type HomeComponentProps = TouchableOpacityProps & {
   title: string;
@@ -47,30 +47,34 @@ export const HomeComponent: React.FC<HomeComponentProps> = ({
 
         <StoryHeader>
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-            <StoryComponents title="Simcards" />
-            <StoryComponents background='#4CA6A8' title="Devices" />
-            <StoryComponents background='#7A4CA8' title="Mapa" onPress={() => navigation.navigate('MapContainer')}/>
-            <StoryComponents background='#EA4C89' title="Hardwares" />
+            <StoryComponents title="Simcards" icon={require('assets/images/chip.png')}/>
+            <StoryComponents background='#4CA6A8' title="Devices" icon={require('assets/images/truck.png')}/>
+            <StoryComponents background='#7A4CA8' title="Mapa" onPress={() => navigation.navigate('MapContainer')} icon={require('assets/images/map.png')}/>
+            <StoryComponents background='#EA4C89' title="Hardwares" icon={require('assets/images/cpu.png')}/>
           </ScrollView>
         </StoryHeader>
 
         <InputConatiner>
           <InputComponent placeholder='Buscar por...' />
+          <SearchContainer>
+            <SearchIcon source={require('assets/images/search.png')}/>
+          </SearchContainer>
         </InputConatiner>
 
         <DocSection />
-        <DocumentContainer>
+
+
+
+
+<DocumentContainer>
           <DocumentCard />
+
         </DocumentContainer>
-        <DocumentContainer>
-          <DocumentCard />
-        </DocumentContainer>
-        <DocumentContainer>
-          <DocumentCard />
-        </DocumentContainer>
-        <DocumentContainer>
-          <DocumentCard />
-        </DocumentContainer>
+
+
+
+
+
       </ScrollView>
     </Container>
   );

@@ -31,9 +31,6 @@ const CardDoc: React.FC<CardProps> = ({ title, subtitle, date }) => {
                     </HeaderContainer>
                 </Header>
 
-         
-
-
             </CardItem>
 
         </CardContainer>

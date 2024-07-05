@@ -15,8 +15,6 @@ export const Logo = styled.Image`
 export const WrapperTitle = styled.View`
   flex-direction: row;
   align-items: flex-start;
-  padding-top: 32px;
-  
 
 `;
 

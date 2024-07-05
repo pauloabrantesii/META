@@ -1,6 +1,10 @@
 import styled from "styled-components/native";
 
 export const Container = styled.View`
+
+`;
+
+export const Content = styled.View`
 padding: 20px 16px;
 gap: 12px;
 align-self: stretch;
@@ -8,6 +12,7 @@ border-radius: 12px;
 border: 1px solid #D0D5DD;
 background: #FFF;
 width: 100%;
+margin-top: 20px;
 `;
 
 export const Header = styled.View`

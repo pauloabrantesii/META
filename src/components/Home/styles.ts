@@ -31,10 +31,25 @@ export const IconContainer = styled.TouchableOpacity`
 
 `;
 
+export const SearchContainer = styled.TouchableOpacity`
+background: #1A1854;
+border-radius: 15px;
+align-items: center;
+justify-content: center;
+width: 46px;
+height: 50px;
+margin-left: 14px;
+`;
+
 export const Icon = styled.Image`
 width: 40px;
 height: 40px;
 `;
+
+export const SearchIcon = styled.Image`
+
+`;
+
 
 export const Logo = styled.Image`
 `;
@@ -56,4 +71,9 @@ export const DocumentContainer = styled.View`
 
 export const InputConatiner = styled.View`
 padding: 24px;
+flex-direction: row;
+
+width: 90%;
+
 `;
+

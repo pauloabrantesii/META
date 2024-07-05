@@ -10,6 +10,7 @@ export const Container = styled.View`
 export const Logo = styled.Image`
   width: 52px;
   height: 48px;
+  bottom: 14px;
 `;
 
 export const WrapperTitle = styled.View`
@@ -72,11 +73,13 @@ font-family: Inter;
 font-size: 14px;
 font-style: normal;
 font-weight: 400;
+
 `;
 
 export const Bottom = styled.View`
 align-items: center;
 gap: 2px;
+margin-top: 14px;
 align-self: stretch;
 flex-direction: row;
 `;

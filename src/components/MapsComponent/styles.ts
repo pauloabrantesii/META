@@ -44,14 +44,11 @@ export const IconCar = styled.Image``;
 
 export const GoBackContainer = styled.TouchableOpacity`
 padding: 12px;
-
-`;
-
-export const GoBackContent = styled.View`
 background: #1A1854;
 align-items: center;
 justify-content: center;
 border-radius: 50%;
 width: 38px;
 height: 38px;
+ left: 10px;
 `;

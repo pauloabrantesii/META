@@ -5,6 +5,9 @@ import { Container, Logo, Title, WrapperTitle } from './styles';
 
 interface DocSectionProps {
     documents: number;
+    horizontal: boolean;
+    width: string;
+    showTitle: boolean;
 }
 
 const data = [
@@ -13,23 +16,25 @@ const data = [
 ];
 
 
-const DocSection: React.FC<DocSectionProps> = ({ documents }) => {
+const DocSection: React.FC<DocSectionProps> = ({ documents, horizontal, width, showTitle }) => {
     return (
         <Container>
-            <WrapperTitle>
-                <Logo />
+            {showTitle && (
+                <WrapperTitle>
+                 <Logo />
                 <Title>Workspaces</Title>
-
             </WrapperTitle>
+            )}
+            
 
             <FlatList
                 data={data}
                 keyExtractor={(item) => item.id}
                 showsHorizontalScrollIndicator={false}
                 renderItem={({ item }) => (
-                    <CardDoc title={item.title} date={item.date} subtitle={item.subtitle} />
+                    <CardDoc title={item.title} date={item.date} subtitle={item.subtitle} width={width} />
                 )}
-                horizontal={true}
+                horizontal={horizontal}
             />
         </Container>
     );

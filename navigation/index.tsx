@@ -5,6 +5,7 @@ import MapsComponent from '~/components/MapsViewComponent';
 import { HomeContainer } from '~/screens/Home';
 import { LoginContainer } from '~/screens/Login';
 import Maps from '~/screens/Maps';
+import SimCardsContainer from '~/screens/SimCardsContainer';
 import TabNavigator from './tab-navigator';
 
 export type RootStackParamList = {
@@ -14,6 +15,7 @@ export type RootStackParamList = {
   Home: undefined;
   MapContainer: undefined;
   MapsView: undefined;
+  SimCardsContainer: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -51,6 +53,12 @@ export default function RootStack() {
           options={{ headerShown: false }}
         />
 
+
+<Stack.Screen
+          name="SimCardsContainer"
+          component={SimCardsContainer}
+          options={{ headerShown: false }}
+        />
 
       </Stack.Navigator>
     </NavigationContainer>

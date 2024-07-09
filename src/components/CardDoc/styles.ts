@@ -1,5 +1,12 @@
 import styled from "styled-components/native";
 
+
+type CardProps = {
+  width?: string;
+};
+
+
+
 export const Container = styled.View`
   padding: 0px 16px;
   flex-direction: column;
@@ -30,10 +37,11 @@ export const CardContainer = styled.View`
 gap: 24px;
 margin-top: 12px;
 
+
 `;
 
-export const CardItem = styled.View`
-width: 200px;
+export const CardItem = styled.View<CardProps>`
+width: ${({width}) => width || '200px'};
 height: 160px;
 padding: 20px 16px;
 flex-direction: column;

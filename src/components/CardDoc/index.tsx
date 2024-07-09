@@ -7,14 +7,14 @@ interface CardProps {
     title: string;
     subtitle: string;
     date: string;
+    width: string;
 }
 
 
-const CardDoc: React.FC<CardProps> = ({ title, subtitle, date }) => {
+const CardDoc: React.FC<CardProps> = ({ title, subtitle, date, width }) => {
     return (
         <CardContainer>
-            <CardItem>
-
+            <CardItem width={width}>
                 <Header>
                     <HeaderContainer>
                         <Logo source={require('assets/images/3-layers.png')} />

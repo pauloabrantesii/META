@@ -47,10 +47,12 @@ export const HomeComponent: React.FC<HomeComponentProps> = ({
 
         <StoryHeader>
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-            <StoryComponents title="Simcards" icon={require('assets/images/chip.png')}/>
+            <StoryComponents title="Simcards" icon={require('assets/images/chip.png')} onPress={() => navigation.navigate('SimCardsContainer')}/>
             <StoryComponents background='#4CA6A8' title="Devices" icon={require('assets/images/truck.png')}/>
             <StoryComponents background='#7A4CA8' title="Mapa" onPress={() => navigation.navigate('MapContainer')} icon={require('assets/images/map.png')}/>
-            <StoryComponents background='#EA4C89' title="Hardwares" icon={require('assets/images/cpu.png')}/>
+            <StoryComponents background='#DF780D'title="Hardwares" icon={require('assets/images/cpu.png')}/>
+            <StoryComponents background='#EA4C89' title="Workspaces" icon={require('assets/images/works.png')}/>
+            <StoryComponents background='#47A000' title="Relatórios" icon={require('assets/images/activity.png')}/>
           </ScrollView>
         </StoryHeader>
 
@@ -61,7 +63,7 @@ export const HomeComponent: React.FC<HomeComponentProps> = ({
           </SearchContainer>
         </InputConatiner>
 
-        <DocSection />
+        <DocSection showTitle={true}/>
 
 
 

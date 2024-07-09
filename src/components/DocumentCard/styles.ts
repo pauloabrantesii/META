@@ -1,5 +1,12 @@
 import styled from "styled-components/native";
 
+
+
+
+type BackgroundProps = {
+    background?: string;
+  };
+
 export const Container = styled.View`
 width: 100%
 
@@ -42,8 +49,8 @@ height: 24px;
 
 `;
 
-export const BackgroundImage = styled.View`
-background: #1A1854;
+export const BackgroundImage = styled.View<BackgroundProps>`
+background: ${({ background }) => background || '#1A1852'};
 width: 50px;
 height: 50px;
 border-radius:  15px;

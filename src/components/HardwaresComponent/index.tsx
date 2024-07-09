@@ -6,7 +6,7 @@ import DocumentCard from '../DocumentCard';
 import { InputComponent } from '../InputComponent';
 import { Container, Icon, IconContainer, InputContainer, InputContent, SafeArea, SearchContainer, SearchIcon, Title, TitleContainer } from './styles';
 
-const DevicesComponent: React.FC = () => {
+const HardwaresComponent: React.FC = () => {
     const navigation = useNavigation();
     
   return (
@@ -17,7 +17,7 @@ const DevicesComponent: React.FC = () => {
             <IconContainer onPress={() => navigation.goBack()}>
                 <Icon source={require('assets/images/arrowBlue.png')}/>
             </IconContainer>
-            <Title>Devices</Title>
+            <Title>Hardwares</Title>
         </TitleContainer>
         <InputContainer>
 <InputContent>
@@ -30,11 +30,11 @@ const DevicesComponent: React.FC = () => {
           </SearchContainer>
         </InputContainer>
 
-        <DocumentCard  code="STRADA CBP-1717 " cadaster="55199992938283" background="#4CA6A8" />
+        <DocumentCard  code="J6X " cadaster="V 1.234" background="#DF780D" />
 
     </Container>
 </SafeArea>
 );
 }
 
-export default DevicesComponent;
+export default HardwaresComponent;

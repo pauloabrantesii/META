@@ -7,22 +7,23 @@ interface DocumentsProps {
     code: string;
     cadaster: string;
     date: string;
+    background: string;
 }
 
-const DocumentCard: React.FC<DocumentsProps> = ({ title, code, cadaster, date }) => {
+const DocumentCard: React.FC<DocumentsProps> = ({ title, code, cadaster, background}) => {
     return (
         <Container>
-<Title>Devices</Title>
+<Title>{title}</Title>
 <Content>
             <Header>
                 <HeaderContent>
-                    <BackgroundImage>
+                    <BackgroundImage background={background}>
                     <Logo source={require('assets/images/truck.png')} />
                     </BackgroundImage>
 
                     <HeaderTextContainer>
-                        <Title>STRADA CBP-1717</Title>
-                        <Subtitle>55199992938283</Subtitle>
+                        <Title>{code}</Title>
+                        <Subtitle>{cadaster}</Subtitle>
                     </HeaderTextContainer>
                 </HeaderContent>
 

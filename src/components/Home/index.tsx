@@ -50,7 +50,7 @@ export const HomeComponent: React.FC<HomeComponentProps> = ({
             <StoryComponents title="Simcards" icon={require('assets/images/chip.png')} onPress={() => navigation.navigate('SimCardsContainer')}/>
             <StoryComponents background='#4CA6A8' title="Devices" icon={require('assets/images/truck.png')} onPress={() => navigation.navigate('DevicesContainer')}/>
             <StoryComponents background='#7A4CA8' title="Mapa" onPress={() => navigation.navigate('MapContainer')} icon={require('assets/images/map.png')}/>
-            <StoryComponents background='#DF780D'title="Hardwares" icon={require('assets/images/cpu.png')} onPress={() => navigation.navigate('SimCardsContainer')}/>
+            <StoryComponents background='#DF780D'title="Hardwares" icon={require('assets/images/cpu.png')} onPress={() => navigation.navigate('HardwaresContainer')}/>
             <StoryComponents background='#EA4C89' title="Workspaces" icon={require('assets/images/works.png')} onPress={() => navigation.navigate('SimCardsContainer')}/>
             <StoryComponents background='#47A000' title="Relatórios" icon={require('assets/images/activity.png')} onPress={() => navigation.navigate('SimCardsContainer')}/>
           </ScrollView>
@@ -69,7 +69,7 @@ export const HomeComponent: React.FC<HomeComponentProps> = ({
 
 
 <DocumentContainer>
-          <DocumentCard />
+<DocumentCard title="Devices" code="STRADA CBP-1717" cadaster="55199992938283" />
 
         </DocumentContainer>
 

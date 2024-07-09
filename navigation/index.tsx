@@ -2,6 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import MapsComponent from '~/components/MapsViewComponent';
+import DevicesContainer from '~/screens/DevicesContainer';
 import { HomeContainer } from '~/screens/Home';
 import { LoginContainer } from '~/screens/Login';
 import Maps from '~/screens/Maps';
@@ -16,6 +17,7 @@ export type RootStackParamList = {
   MapContainer: undefined;
   MapsView: undefined;
   SimCardsContainer: undefined;
+  DevicesContainer: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -57,6 +59,12 @@ export default function RootStack() {
 <Stack.Screen
           name="SimCardsContainer"
           component={SimCardsContainer}
+          options={{ headerShown: false }}
+        />
+
+<Stack.Screen
+          name="DevicesContainer"
+          component={DevicesContainer}
           options={{ headerShown: false }}
         />
 

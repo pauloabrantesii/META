@@ -1,6 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
+import MapsComponent from '~/components/MapsViewComponent';
 import { HomeContainer } from '~/screens/Home';
 import { LoginContainer } from '~/screens/Login';
 import Maps from '~/screens/Maps';
@@ -12,6 +13,7 @@ export type RootStackParamList = {
   Login: undefined;
   Home: undefined;
   MapContainer: undefined;
+  MapsView: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -42,6 +44,14 @@ export default function RootStack() {
           component={Maps}
           options={{ headerShown: false }}
         />
+
+<Stack.Screen
+          name="MapsView"
+          component={MapsComponent}
+          options={{ headerShown: false }}
+        />
+
+
       </Stack.Navigator>
     </NavigationContainer>
   );

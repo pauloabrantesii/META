@@ -3,6 +3,8 @@ import styled from 'styled-components/native';
 
 export const Container = styled.SafeAreaView`
   flex: 1;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Map = styled(MapView)`
@@ -12,9 +14,18 @@ export const Map = styled(MapView)`
 
 export const ButtonContainer = styled.View`
   position: absolute;
-  bottom: 20px;
+
   left: 10px;
   align-items: center;
+
+`;
+
+
+
+export const BottomContainer = styled.View`
+  align-items: center;
+bottom: 200px;
+
 `;
 
 export const Button = styled.TouchableOpacity`
@@ -54,8 +65,9 @@ height: 38px;
 
 export const CalloutContainer = styled.View`
 width: 335px;
-
+background: #fff;
 padding: 12px;
+border-radius: 10px;
 
 `;
 

@@ -63,10 +63,7 @@ export const HomeComponent: React.FC<HomeComponentProps> = ({
 
         <DocSection />
 
-
-
-
-<DocumentContainer>
+        <DocumentContainer>
           <DocumentCard />
 
         </DocumentContainer>
